@@ -29,7 +29,7 @@ export default function Cartogram() {
   useGSAP(
     () => {
       ScrollTrigger.defaults({
-        markers: true,
+        markers: false,
       });
 
       var points = gsap.utils.toArray(".point");
