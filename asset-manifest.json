@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cudan2023/static/css/main.caaf0cde.css",
-    "main.js": "/cudan2023/static/js/main.3f21bedf.js",
+    "main.css": "/cudan2023/static/css/main.a4b33a88.css",
+    "main.js": "/cudan2023/static/js/main.a52517c9.js",
     "static/css/861.4233f93e.chunk.css": "/cudan2023/static/css/861.4233f93e.chunk.css",
     "static/js/861.4c13d5eb.chunk.js": "/cudan2023/static/js/861.4c13d5eb.chunk.js",
     "static/media/ajd2.png": "/cudan2023/static/media/ajd2.fbab8588db57b931bb50.png",
@@ -66,13 +66,13 @@
     "static/media/networkBar.svg": "/cudan2023/static/media/networkBar.db50cf6fbfc46fa158c7d66f96622e76.svg",
     "static/media/tcs.svg": "/cudan2023/static/media/tcs.fc8f9871a6dd775499dd8678b298f6e0.svg",
     "index.html": "/cudan2023/index.html",
-    "main.caaf0cde.css.map": "/cudan2023/static/css/main.caaf0cde.css.map",
-    "main.3f21bedf.js.map": "/cudan2023/static/js/main.3f21bedf.js.map",
+    "main.a4b33a88.css.map": "/cudan2023/static/css/main.a4b33a88.css.map",
+    "main.a52517c9.js.map": "/cudan2023/static/js/main.a52517c9.js.map",
     "861.4233f93e.chunk.css.map": "/cudan2023/static/css/861.4233f93e.chunk.css.map",
     "861.4c13d5eb.chunk.js.map": "/cudan2023/static/js/861.4c13d5eb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.caaf0cde.css",
-    "static/js/main.3f21bedf.js"
+    "static/css/main.a4b33a88.css",
+    "static/js/main.a52517c9.js"
   ]
 }
