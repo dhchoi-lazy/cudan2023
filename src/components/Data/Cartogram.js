@@ -14,6 +14,7 @@ import { LoremIpsum } from "react-lorem-ipsum";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/all";
 import styled from "styled-components";
+import { useGSAP } from "@gsap/react";
 import "./Cartogram.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -25,91 +26,98 @@ export default function Cartogram() {
   const cartogramStyle = {
     width: 400,
   };
-  useEffect(() => {
-    ScrollTrigger.defaults({
-      markers: false,
-    });
+  useGSAP(
+    () => {
+      ScrollTrigger.defaults({
+        markers: true,
+      });
 
-    var points = gsap.utils.toArray(".point");
-    var indicators = gsap.utils.toArray(".indicator");
+      var points = gsap.utils.toArray(".point");
+      var indicators = gsap.utils.toArray(".indicator");
 
-    var height = 100 * points.length;
+      var height = 100 * points.length;
 
-    gsap.set(".indicators", { display: "flex" });
+      gsap.set(".indicators", { display: "flex" });
 
-    let tl = gsap.timeline({
-      duration: points.length,
-      scrollTrigger: {
-        trigger: "#cartogramWrapper",
-        start: "top center",
-        end: "+=" + height + "%",
-        scrub: true,
-        id: "points",
-      },
-    });
+      const tl = gsap.timeline({
+        duration: points.length,
+        scrollTrigger: {
+          trigger: cartogramRef.current,
+          start: "top center",
+          end: "+=" + height + "%",
+          scrub: true,
+          id: "points",
+        },
+      });
 
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: "#cartogramWrapper",
-        start: "top top",
-        end: "+=" + height + "%",
-        scrub: true,
-        pin: "#cartogramWrapper",
-        pinSpacing: true,
-        id: "pinning",
-        markers: false,
-      },
-    });
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: cartogramRef.current,
+          start: "top top",
+          end: "+=" + height + "%",
+          scrub: true,
+          pin: cartogramRef.current,
+          pinSpacing: true,
+          id: "pinning",
+          markers: false,
+        },
+      });
 
-    points.forEach(function (elem, i) {
-      gsap.set(elem, { position: "absolute", top: 0 });
+      points.forEach(function (elem, i) {
+        gsap.set(elem, { position: "absolute", top: 0 });
 
-      tl.to(indicators[i], { backgroundColor: "#BF3415", duration: 0.25 }, i);
-      tl.from(elem.querySelectorAll("img"), { autoAlpha: 0 }, i);
-      tl.from(
-        elem.querySelector("article"),
-        { autoAlpha: 0, translateY: 100 },
-        i
-      );
-
-      tl.addLabel("position-" + i); // Adding a label here, with the index as unique identifier
-
-      if (i != points.length - 1) {
-        tl.to(
-          indicators[i],
-          { backgroundColor: "#adadad", duration: 0.25 },
-          i + 0.75
-        );
-        tl.to(
+        tl.to(indicators[i], { backgroundColor: "#BF3415", duration: 0.25 }, i);
+        tl.from(elem.querySelectorAll("img"), { autoAlpha: 0 }, i);
+        tl.from(
           elem.querySelector("article"),
-          { autoAlpha: 0, translateY: -100 },
-          i + 0.75
+          { autoAlpha: 0, translateY: 100 },
+          i
         );
-        tl.to(elem.querySelectorAll("img"), { autoAlpha: 0 }, i + 0.75);
-      }
-    });
 
-    // Looping over all the indicators...
-    indicators.forEach(function (indicator, i) {
-      // ...forEach of them adding a click-event listener...
-      indicator.addEventListener("click", function () {
-        // ...leveraging the ScrollToPlugin and ...
-        // ...ScrollTrigger's  labelToScroll() method
-        gsap.to(window, {
-          duration: 1,
-          scrollTo: tl.scrollTrigger.labelToScroll(`position-${i}`),
+        tl.addLabel("position-" + i); // Adding a label here, with the index as unique identifier
+
+        if (i != points.length - 1) {
+          tl.to(
+            indicators[i],
+            { backgroundColor: "#adadad", duration: 0.25 },
+            i + 0.75
+          );
+          tl.to(
+            elem.querySelector("article"),
+            { autoAlpha: 0, translateY: -100 },
+            i + 0.75
+          );
+          tl.to(elem.querySelectorAll("img"), { autoAlpha: 0 }, i + 0.75);
+        }
+      });
+
+      // Looping over all the indicators...
+      indicators.forEach(function (indicator, i) {
+        // ...forEach of them adding a click-event listener...
+        indicator.addEventListener("click", function () {
+          // ...leveraging the ScrollToPlugin and ...
+          // ...ScrollTrigger's  labelToScroll() method
+          gsap.to(window, {
+            duration: 1,
+            scrollTo: tl.scrollTrigger.labelToScroll(`position-${i}`),
+          });
         });
       });
-    });
-  }, []);
+    },
+    {
+      scope: cartogramRef,
+      revertOnUpdate: true,
+      dependencies: [cartogramRef],
+    }
+  );
 
   // Use Title and Wrapper like any other React component – except they're styled!
   return (
     <div>
       <section className="vh"></section>
 
-      <section className="philosophie" ref={cartogramRef}>
-        <div id="cartogramWrapper">
+      <div className="philosophie" ref={wrapperRef}>
+        <div id="cartogramWrapper" ref={cartogramRef}>
           <div className="indicators">
             <div className="indicator">15th</div>
             <div className="indicator">16th</div>
@@ -189,7 +197,7 @@ export default function Cartogram() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <section className="vh"></section>
     </div>

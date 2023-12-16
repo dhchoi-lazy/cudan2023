@@ -130,5 +130,5 @@ export default function Bangmok() {
     });
     // svg.selectAll(".century").style("margin", "100 auto");
   }, []);
-  return <div ref={ref} />;
+  return <div ref={ref} style={{ minHeight: "100vh" }} />;
 }

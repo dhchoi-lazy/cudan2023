@@ -9,14 +9,15 @@ import bangmok2 from "./bangmok.png";
 import bangmok from "./bangmok.jpg";
 import government from "./government.png";
 import ggdj2 from "./ggdj.png";
-import Cartogram from "./Cartogram";
+import React from "react";
 import Age from "./Age";
 
-import { useRef, useLayoutEffect } from "react";
+import { useRef, useLayoutEffect, Suspense } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 export default function Data() {
+  const Cartogram = React.lazy(() => import("./Cartogram"));
   const numberRef = useRef();
   const dataRef = useRef();
   useLayoutEffect(() => {
@@ -339,7 +340,9 @@ export default function Data() {
 
         <GridHighlight>
           <h3 className="text-2xl">2. Where they come from?</h3>
-          <Cartogram />
+          <Suspense fallback={null}>
+            <Cartogram />
+          </Suspense>
         </GridHighlight>
 
         <GridNormal>
