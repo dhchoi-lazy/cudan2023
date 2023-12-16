@@ -122,7 +122,7 @@ const Header = () => {
             backgroundColor: "#ebe4f5",
           }}
         >
-          Donghyeok Choi
+          Donghyeok Choi and Juyong Park
         </span>
       </h2>
       <h3

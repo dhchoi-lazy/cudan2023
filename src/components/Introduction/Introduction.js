@@ -11,6 +11,7 @@ import S2 from "./introduction2.png";
 import S3 from "./introduction3.png";
 import S4 from "./introduction4.png";
 import S5 from "./introduction5.png";
+import S6 from "./introduction6.png";
 import Netflix from "./kingdom.jpg";
 import NorthKorea from "./north_korea.jpg";
 import { ReactComponent as Historymap } from "./historymap.svg";
@@ -21,7 +22,7 @@ import gsap from "gsap";
 import Joseon from "./Joseon";
 import Yangban from "./yangban.svg";
 
-const images = [S4, S5, S1, S2, S3];
+const images = [S4, S5, S6, S1, S2, S3];
 export default function Introduction() {
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(DrawSVGPlugin);
