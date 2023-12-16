@@ -46,8 +46,7 @@ function App() {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff"></meta>
       </HelmetProvider>
-
-      <Header />
+      <img src={QR} className="fixed w-20" alt="QR" />
       <TOC />
       <Introduction />
       <Data />
