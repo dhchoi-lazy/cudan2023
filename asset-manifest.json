@@ -1,11 +1,13 @@
 {
   "files": {
-    "main.css": "/cudan2023/static/css/main.f85cfce0.css",
-    "main.js": "/cudan2023/static/js/main.187dd021.js",
+    "main.css": "/cudan2023/static/css/main.979211d0.css",
+    "main.js": "/cudan2023/static/js/main.5a21edf0.js",
+    "static/css/861.4233f93e.chunk.css": "/cudan2023/static/css/861.4233f93e.chunk.css",
+    "static/js/861.21b650eb.chunk.js": "/cudan2023/static/js/861.21b650eb.chunk.js",
     "static/media/ajd2.png": "/cudan2023/static/media/ajd2.fbab8588db57b931bb50.png",
     "static/media/introduction1.png": "/cudan2023/static/media/introduction1.28efc558d2d97ee01c4d.png",
     "static/media/introduction3.png": "/cudan2023/static/media/introduction3.aabc91a2d5494c8bfc96.png",
-    "static/media/kingdom_netflix_xlg.jpg": "/cudan2023/static/media/kingdom_netflix_xlg.700caf4a82a0f99f47f8.jpg",
+    "static/media/kingdom.jpg": "/cudan2023/static/media/kingdom.700caf4a82a0f99f47f8.jpg",
     "static/media/related4.png": "/cudan2023/static/media/related4.78ebeb858dc3bc63f026.png",
     "static/media/related9.png": "/cudan2023/static/media/related9.4e1c7a5cf7c5a2e296d7.png",
     "static/media/related11.png": "/cudan2023/static/media/related11.e1719d676c39e9cdccfb.png",
@@ -43,7 +45,7 @@
     "static/media/17b.svg": "/cudan2023/static/media/17b.9e98f17ad903912f408db242a008c652.svg",
     "static/media/16b.svg": "/cudan2023/static/media/16b.19a6c0cdc3d6ed2b3ced22a1933d995f.svg",
     "static/media/15b.svg": "/cudan2023/static/media/15b.73b947f8550829318b140160813e3f59.svg",
-    "static/media/2022-04-16T003402Z_525610141_RC20OT9LGG36_RTRMADP_3_NORTHKOREA-ANNIVERSARY-1024x678.jpg": "/cudan2023/static/media/2022-04-16T003402Z_525610141_RC20OT9LGG36_RTRMADP_3_NORTHKOREA-ANNIVERSARY-1024x678.45c4732a1e2eb25f8e8f.jpg",
+    "static/media/north_korea.jpg": "/cudan2023/static/media/north_korea.45c4732a1e2eb25f8e8f.jpg",
     "static/media/psi-sedoga-gwageo.svg": "/cudan2023/static/media/psi-sedoga-gwageo.fa01d382b7f77bb15e2a946173ee5317.svg",
     "static/media/yangban.svg": "/cudan2023/static/media/yangban.1255d299bd4767b56f3476a7b96470bc.svg",
     "static/media/bangmok.jpg": "/cudan2023/static/media/bangmok.81a200519442a3d7fc1a.jpg",
@@ -64,11 +66,13 @@
     "static/media/networkBar.svg": "/cudan2023/static/media/networkBar.db50cf6fbfc46fa158c7d66f96622e76.svg",
     "static/media/tcs.svg": "/cudan2023/static/media/tcs.fc8f9871a6dd775499dd8678b298f6e0.svg",
     "index.html": "/cudan2023/index.html",
-    "main.f85cfce0.css.map": "/cudan2023/static/css/main.f85cfce0.css.map",
-    "main.187dd021.js.map": "/cudan2023/static/js/main.187dd021.js.map"
+    "main.979211d0.css.map": "/cudan2023/static/css/main.979211d0.css.map",
+    "main.5a21edf0.js.map": "/cudan2023/static/js/main.5a21edf0.js.map",
+    "861.4233f93e.chunk.css.map": "/cudan2023/static/css/861.4233f93e.chunk.css.map",
+    "861.21b650eb.chunk.js.map": "/cudan2023/static/js/861.21b650eb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f85cfce0.css",
-    "static/js/main.187dd021.js"
+    "static/css/main.979211d0.css",
+    "static/js/main.5a21edf0.js"
   ]
 }
